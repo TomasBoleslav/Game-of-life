@@ -25,9 +25,9 @@ Zejména pro vzhled aplikace byly použity některé knihovny:
 
 ### Moduly
 - **gol.py**  
-Třídy potřebné pro výpočet, kreslení a animaci hry, které se využijí v hlavním programu.
+Třídy určené pro výpočet, kreslení a animaci: *Board*, *Rule*, *Painter*, *Animator*.
 - **main.py**  
-Určen pouze jako hlavní program. Z důvodu přehlednosti jsou proměnné aplikace psány jako veřejné (bez podtržítka).
+Určen pouze jako hlavní program. Třídy *FileManager*, *TkState*, *Application*.
 
 ### Třída Board
 Obsahuje informace o herní ploše (seznam živých buněk).
@@ -36,7 +36,7 @@ Dovoluje přidávat a odebírat buňky, počítá další generaci buněk.
 #### Proměnné:
 - **current:**  
 2D seznam proměnných bool reprezentující mřížku buněk (*True* = živá buňka, *False* = mrtvá buňka).
-- **living**  
+- **living:**  
 Seznam souřadnic živých buněk v *current*.
 
 #### Metody:
@@ -44,28 +44,27 @@ Seznam souřadnic živých buněk v *current*.
 Spočítá další generaci buněk podle počtu jejich sousedů.  
 Prochází pouze živé buňky a jejich sousedy, protože ostatní buňky zůstanou nezměněné.
 
-#### Rule
+### Třída Rule
 Slouží pro snadnější nastavování pravidel hry (počtů sousedů) pomocí textového řetězce.
 
-##### Datové struktury:
-**birth_rule:**
+#### Proměnné:
+- **birth_rule:**  
 Množina pro počty sousedů, které způsobují narození buňky.
-
-**remain_rule:**
+- **remain_rule:**  
 Množina pro počty sousedů, se kterými zůstane buňka naživu.
 
-##### Metody:
-**try_set_rule(value: str) → bool:**
-Pokusí se nastavit textový řetězec *value* jako nové pravidlo.
+#### Metody:
+- **try_set_rule(value: str) → bool:**  
+Pokusí se nastavit textový řetězec *value* jako nové pravidlo.  
 Vrací *True*, pokud je pravidlo správné, jinak *False*.
 
-#### Painter
+### Třída Painter
 Kreslí herní plochu *Board* na plátno *Canvas*.
 
-##### Proměnné instance:
-**grids:**
-Obrázky s mřížkou pro různé velikosti buněk. Slouží jako pozadí, na které se budou buňky kreslit. 
-Vytváří se v metodě *reset*, kterou je nutné zavolat před jakýmkoliv kreslením.
+##### Proměnné:
+- **grids:**  
+Obrázky s mřížkou pro různé velikosti buněk. Slouží jako pozadí, na které se budou buňky kreslit.  
+Vytváří se v metodě *reset*, kterou je nutné zavolat před jakýmkoliv kreslením.  
 Lze mezi nimi přepínat a tím mřížku „přibližovat / oddalovat“.
 
 **m_cell:**
