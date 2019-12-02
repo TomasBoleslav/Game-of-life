@@ -12,6 +12,9 @@ Program umožňuje:
 - Přiblížit a oddálit herní plochu.
 - Uložit a načíst sestavu buněk z textového souboru.
 
+## Použití
+
+
 ## Dokumentace
 V popisu tříd jsou uvedeny pouze nejdůležitější datové struktury a metody.
 
@@ -85,7 +88,7 @@ Nakreslí herní plochu v těchto krocích:
   - Výsledný obrázek nastaví jako parametr *image* objektu *canvas_image*.
 
 ### Třída Animator
-S využitím objektu *Painter* kreslí generace buněk za sebou jako animaci.
+S využitím objektu typu *Painter* kreslí generace buněk za sebou jako animaci.
 
 #### Proměnné:
 - **time_per_gen**:  
