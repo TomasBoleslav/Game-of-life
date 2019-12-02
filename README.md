@@ -18,14 +18,11 @@ V popisu tříd jsou uvedeny pouze nejdůležitější datové struktury a metod
 ### Použité knihovny
 Program využívá některé knihovny zejména pro vzhled aplikace.
 
-#### tkinter:
-Okno aplikace a jeho komponenty, zpracování událostí od uživatele.
+**tkinter:** Okno aplikace a jeho komponenty, zpracování událostí od uživatele.
 
-#### pillow:
-Vytvoření obrázku v paměti a kreslení.
+**pillow:** Vytvoření obrázku v paměti a kreslení.
 
-#### time:
-Měření času při animaci.
+**time:** Měření času při animaci.
 
 #### os:
 Nalezení cesty k adresáři hlavního programu, která je použita jako výchozí cesta v dialogu pro načítání herní plochy.
