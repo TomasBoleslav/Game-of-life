@@ -18,14 +18,10 @@ V popisu tříd jsou uvedeny pouze nejdůležitější datové struktury a metod
 ### Použité knihovny
 Zejména pro vzhled aplikace byly použity některé knihovny:
 - **Tkinter** - okno aplikace a jeho komponenty, zpracování událostí od uživatele.
-- **Pillow** - ytvoření obrázku v paměti a kreslení.
+- **Pillow** - vytvoření obrázku v paměti a kreslení.
 - **Time** - měření času při animaci.
-
-#### os:
-Nalezení cesty k adresáři hlavního programu, která je použita jako výchozí cesta v dialogu pro načítání herní plochy.
-
-#### typing:
-Doplnění některých datových typů pro našeptávač, které nepatří mezi standardní.
+- **Os** - nalezení cesty k adresáři hlavního programu, která se použije jako výchozí při načítání herní plochy.
+- **Typing** - doplnění některých datových typů pro našeptávač, které nepatří mezi standardní.
 
 ### Modul gol.py
 Obsahuje třídy potřebné pro výpočet, kreslení a animaci hry, které se využijí v hlavním programu.
@@ -34,9 +30,8 @@ Obsahuje třídy potřebné pro výpočet, kreslení a animaci hry, které se vy
 Obsahuje informace o herní ploše (seznam živých buněk).
 Dovoluje přidávat a odebírat buňky, počítá další generaci buněk.
 
-##### Proměnné instance:
-**current:**
-2D seznam proměnných bool reprezentující mřížku buněk (*True* = živá buňka, *False* = mrtvá buňka).
+- **Proměnné instance:**
+  - **current:** 2D seznam proměnných bool reprezentující mřížku buněk (*True* = živá buňka, *False* = mrtvá buňka).
 **living:**
 Seznam souřadnic živých buněk v *current*.
 
