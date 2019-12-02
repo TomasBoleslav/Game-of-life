@@ -28,7 +28,7 @@ Zejména pro vzhled aplikace byly použity některé knihovny:
 
 ### Moduly
 - **gol.py:**  
-Třídy určené pro výpočet, kreslení a animaci: *Board*, *Rule*, *Painter*, *Animator*.
+Třídy určené pro výpočet, kreslení a animaci: `Board`, `Rule`, `Painter`, `Animator`.
 - **main.py:**  
 Hlavní program se třídami: *FileManager*, *TkState*, *Application*.
 
@@ -74,7 +74,7 @@ Souřadnice buňky, která je zobrazena uprostřed mřížky.
 Se změnou těchto souřadnic se bude zobrazovat jiná část herní plochy.  
 Obraz se tak může posouvat nahoru, dolů, anebo do stran.
 - **canvas_image:**  
-Objekt obrázku na plátně *Canvas* z knihovny tkinter.  
+Objekt obrázku na plátně *Canvas* knihovny *tkinter*.  
 Je natažen na celou velikost plátna, pokud nepřekračuje velikost mřížek.  
 Nakreslení herní plochy je provedeno změnou jeho parametru *image*.
 
