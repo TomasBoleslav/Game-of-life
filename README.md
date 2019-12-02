@@ -34,13 +34,13 @@ Obsahuje informace o herní ploše (seznam živých buněk).
 Dovoluje přidávat a odebírat buňky, počítá další generaci buněk.
 
 #### Proměnné:
-- **current:**  
+- **`current`:**  
 2D seznam proměnných bool reprezentující mřížku buněk (*True* = živá buňka, *False* = mrtvá buňka).
-- **living:**  
+- **`living`:**  
 Seznam souřadnic živých buněk v *current*.
 
 #### Metody:
-- **next_gen() -> None:**  
+- **`next_gen() -> None:`**  
 Spočítá další generaci buněk podle počtu jejich sousedů.  
 Prochází pouze živé buňky a jejich sousedy, protože ostatní buňky zůstanou nezměněné.
 
