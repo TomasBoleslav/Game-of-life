@@ -33,13 +33,14 @@ Třídy určené pro výpočet, kreslení a animaci: *Board*, *Rule*, *Painter*,
 Hlavní program se třídami: *FileManager*, *TkState*, *Application*.
 
 ### Třída `Board`
-Obsahuje informace o herní ploše (seznam živých buněk). Umožňuje přidávat a odebírat buňky, počítá jejich další generace.
+Obsahuje informace o herní ploše (seznam buněk) a stará se o výpočet dalších generací.
+Umožňuje přidávat a odebírat buňky.
 
 #### Proměnné:
 - **current:**  
 Mřížka současné generace buněk jako 2D seznam proměnných bool (*True* = živá buňka, *False* = mrtvá buňka).
 - **living:**  
-Seznam souřadnic živých buněk v *current*.
+Seznam souřadnic živých buněk v seznamu *current*.
 
 #### Metody:
 - **next_gen() -> None:**  
@@ -51,7 +52,7 @@ Slouží pro snadnější nastavování pravidel hry (počtů sousedů) pomocí 
 
 #### Proměnné:
 - **birth_rule:**  
-Množina pro počty sousedů, které způsobují narození buňky.
+Množina pro počty sousedů, které způsobí narození nové buňky.
 - **remain_rule:**  
 Množina pro počty sousedů, se kterými zůstane buňka naživu.
 
