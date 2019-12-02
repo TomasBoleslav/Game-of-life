@@ -16,12 +16,9 @@ Program umožňuje:
 V popisu tříd jsou uvedeny pouze nejdůležitější datové struktury a metody.
 
 ### Použité knihovny
-Program využívá některé knihovny zejména pro vzhled aplikace.
-
+Zejména pro vzhled aplikace byly použity některé knihovny:
 - **Tkinter:** Okno aplikace a jeho komponenty, zpracování událostí od uživatele.
-
 - **Pillow:** Vytvoření obrázku v paměti a kreslení.
-
 - **Time:** Měření času při animaci.
 
 #### os:
