@@ -24,20 +24,25 @@ Zejména pro vzhled aplikace byly použity některé knihovny:
 - **Typing** - doplnění některých datových typů pro našeptávač, které nepatří mezi standardní.
 
 ### Moduly
-**gol.py** - Obsahuje třídy potřebné pro výpočet, kreslení a animaci hry, které se využijí v hlavním programu.
-
-**main.py** - Určen pouze jako hlavní program. Z důvodu přehlednosti jsou proměnné tříd psány jako veřejné (bez podtržítka).
+- **gol.py**  
+Třídy potřebné pro výpočet, kreslení a animaci hry, které se využijí v hlavním programu.
+- **main.py**  
+Určen pouze jako hlavní program. Z důvodu přehlednosti jsou proměnné aplikace psány jako veřejné (bez podtržítka).
 
 ### Třída Board
 Obsahuje informace o herní ploše (seznam živých buněk).
 Dovoluje přidávat a odebírat buňky, počítá další generaci buněk.
 
-#### Proměnné instance:**
-- **current:**  2D seznam proměnných bool reprezentující mřížku buněk (*True* = živá buňka, *False* = mrtvá buňka).
-- **living:**  Seznam souřadnic živých buněk v *current*.
+#### Proměnné:
+- **current:**  
+2D seznam proměnných bool reprezentující mřížku buněk (*True* = živá buňka, *False* = mrtvá buňka).
+- **living**  
+Seznam souřadnic živých buněk v *current*.
 
 #### Metody:
-- **next_gen() -> None:** - Spočítá další generaci buněk podle počtu jejich sousedů. Prochází pouze živé buňky a jejich sousedy, protože ostatní buňky zůstanou nezměněné.
+- **next_gen() -> None:**  
+Spočítá další generaci buněk podle počtu jejich sousedů.  
+Prochází pouze živé buňky a jejich sousedy, protože ostatní buňky zůstanou nezměněné.
 
 #### Rule
 Slouží pro snadnější nastavování pravidel hry (počtů sousedů) pomocí textového řetězce.
