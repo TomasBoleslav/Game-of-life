@@ -11,28 +11,20 @@ Program umožňuje:
 - Změnit rychlost animace na některou z přednastavených hodnot.
 - Přiblížit / oddálit herní plochu.
 - Uložit / načíst sestavu buněk z textového souboru.
-
 ## Dokumentace
 V popisu tříd jsou uvedeny pouze nejdůležitější datové struktury a metody.
-
 ### Použité knihovny
 Program využívá některé knihovny zejména pro vzhled aplikace.
-
 #### tkinter:
 Okno aplikace a jeho komponenty, zpracování událostí od uživatele.
-
 #### pillow:
 Vytvoření obrázku v paměti a kreslení.
-
 #### time:
 Měření času při animaci.
-
 #### os:
 Nalezení cesty k adresáři hlavního programu, která je použita jako výchozí cesta v dialogu pro načítání herní plochy.
-
 #### typing:
 Doplnění některých datových typů pro našeptávač, které nepatří mezi standardní.
-
 ### Modul gol.py
 Obsahuje třídy potřebné pro výpočet, kreslení a animaci hry, které se využijí v hlavním programu.
 
