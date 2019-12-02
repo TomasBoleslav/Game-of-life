@@ -30,7 +30,7 @@ Zejména pro vzhled aplikace byly použity některé knihovny:
 - **gol.py:**  
 Třídy určené pro výpočet, kreslení a animaci: `Board`, `Rule`, `Painter`, `Animator`.
 - **main.py:**  
-Hlavní program se třídami: *FileManager*, *TkState*, *Application*.
+Hlavní program se třídami: `FileManager`, `TkState`, `Application`.
 
 ### Třída `Board`
 Obsahuje informace o herní ploše (seznam buněk) a stará se o výpočet dalších generací.
@@ -38,9 +38,9 @@ Umožňuje přidávat a odebírat buňky.
 
 #### Proměnné:
 - **current:**  
-Mřížka současné generace buněk jako 2D seznam proměnných bool (*True* = živá buňka, *False* = mrtvá buňka).
+Mřížka současné generace buněk jako 2D seznam proměnných bool (`True` = živá buňka, `False` = mrtvá buňka).
 - **living:**  
-Seznam souřadnic živých buněk v seznamu *current*.
+Seznam souřadnic živých buněk v seznamu `current`.
 
 #### Metody:
 - **next_gen() -> None:**  
@@ -58,11 +58,11 @@ Množina pro počty sousedů, se kterými zůstane buňka naživu.
 
 #### Metody:
 - **try_set_rule(value: str) → bool:**  
-Pokusí se nastavit textový řetězec *value* jako nové pravidlo.  
-Vrací *True*, pokud je pravidlo správné, jinak *False*.
+Pokusí se nastavit textový řetězec `value` jako nové pravidlo.  
+Vrací `True`, pokud je pravidlo správné, jinak `False`.
 
 ### Třída `Painter`
-Kreslí herní plochu *Board* na plátno *Canvas*.
+Kreslí herní plochu `Board` na plátno `Canvas`.
 
 #### Proměnné:
 - **grids:**  
@@ -74,7 +74,7 @@ Souřadnice buňky, která je zobrazena uprostřed mřížky.
 Se změnou těchto souřadnic se bude zobrazovat jiná část herní plochy.  
 Obraz se tak může posouvat nahoru, dolů, anebo do stran.
 - **canvas_image:**  
-Objekt obrázku na plátně *Canvas* knihovny *tkinter*.  
+Objekt obrázku na plátně `Canvas` knihovny `tkinter`.  
 Je natažen na celou velikost plátna, pokud nepřekračuje velikost mřížek.  
 Nakreslení herní plochy je provedeno změnou jeho parametru *image*.
 
@@ -83,12 +83,12 @@ Nakreslení herní plochy je provedeno změnou jeho parametru *image*.
 Vytváří obrázky mřížek pro zadané velikosti.
 - **draw_board() -> None:**  
 Nakreslí herní plochu v těchto krocích:
-  - Ořízne prostřední část mřížky z *grids* na velikost plátna.
-  - Podle souřadnic buňky kreslené doprostřed (*m_cell*) nakreslí všechny viditelné buňky na vyříznutou mřížku.
-  - Výsledný obrázek nastaví jako parametr *image* objektu *canvas_image*.
+  - Ořízne prostřední část mřížky z `grids` na velikost plátna.
+  - Podle souřadnic buňky kreslené doprostřed (`m_cell`) nakreslí všechny viditelné buňky na vyříznutou mřížku.
+  - Výsledný obrázek nastaví jako parametr *image* objektu `canvas_image`.
 
 ### Třída `Animator`
-S využitím objektu typu *Painter* kreslí generace buněk za sebou jako animaci.
+S využitím objektu typu `Painter` kreslí generace buněk za sebou jako animaci.
 
 #### Proměnné:
 - **time_per_gen**:  
@@ -101,13 +101,13 @@ Spustí animaci.
 Pozastaví animaci.
 
 ### Třída `FileManager`
-Statická třída, která načítá a ukládá plochu *Board* do souboru.
-Výsledek zobrazuje v okně se zprávou (*messagebox*).
+Statická třída, která načítá a ukládá plochu `Board` do souboru.
+Výsledek zobrazuje v okně se zprávou (`messagebox`).
 
 ### Třída `TkState`
-Statická třída, která aktivuje a deaktivuje komponenty *tkinter*.
+Statická třída, která aktivuje a deaktivuje komponenty `tkinter`.
 
 ### Třída `Application`
 Propojuje výpočet a grafické rozhraní programu.
-Obsahuje komponenty okna a objekty modulu *gol.py*, se kterými manipuluje podle událostí.
+Obsahuje komponenty okna a objekty modulu `gol.py`, se kterými manipuluje podle událostí.
 
