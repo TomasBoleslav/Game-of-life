@@ -2,23 +2,23 @@
 
 ## Specifikace
 
-Implementace Conwayovy Hry života v okenní aplikaci.
+Implementace [Conwayovy Hry života](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) v okenní aplikaci.
 
-Vývoj generací buněk se zobrazuje za sebou ve snímcích jako animace.
+Vývoj generací buněk je zobrazován za sebou ve snímcích jako animace.
 Program umožňuje:
 - Nakreslit počáteční rozložení buněk v dostatečně velké mřížce.
 - Nastavit počty sousedů buněk pro přežití a narození nových.
 - Změnit rychlost animace na některou z přednastavených hodnot.
-- Přiblížit / oddálit herní plochu.
-- Uložit / načíst sestavu buněk z textového souboru.
+- Přiblížit a oddálit herní plochu.
+- Uložit a načíst sestavu buněk z textového souboru.
 
 ## Dokumentace
 V popisu tříd jsou uvedeny pouze nejdůležitější datové struktury a metody.
 
 ### Použité knihovny
 Zejména pro vzhled aplikace byly použity některé knihovny:
-- **Tkinter** - okno aplikace a jeho komponenty, zpracování událostí od uživatele.
-- **Pillow** - vytvoření obrázku v paměti a kreslení.
+- **Tkinter** - okno programu a jeho komponenty, zpracování událostí od uživatele.
+- **Pillow** - kreslení na obrázek v paměti.
 - **Time** - měření času při animaci.
 - **Os** - nalezení cesty k adresáři hlavního programu, která se použije jako výchozí při načítání herní plochy.
 - **Typing** - doplnění některých datových typů pro našeptávač, které nepatří mezi standardní.
