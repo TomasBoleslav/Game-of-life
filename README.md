@@ -24,9 +24,9 @@ Zejména pro vzhled aplikace byly použity některé knihovny:
 - **Typing** - doplnění některých datových typů pro našeptávač, které nepatří mezi standardní.
 
 ### Moduly
-- **`gol.py`**  
+- **gol.py:**  
 Třídy určené pro výpočet, kreslení a animaci: *Board*, *Rule*, *Painter*, *Animator*.
-- **`main.py`**  
+- **main.py:**  
 Hlavní program se třídami: *FileManager*, *TkState*, *Application*.
 
 ### Třída Board
@@ -34,13 +34,13 @@ Obsahuje informace o herní ploše (seznam živých buněk).
 Dovoluje přidávat a odebírat buňky, počítá další generaci buněk.
 
 #### Proměnné:
-- **`current`:**  
+- **current:**  
 2D seznam proměnných bool reprezentující mřížku buněk (*True* = živá buňka, *False* = mrtvá buňka).
-- **`living`:**  
+- **living:**  
 Seznam souřadnic živých buněk v *current*.
 
 #### Metody:
-- **`next_gen() -> None:`**  
+- **next_gen() -> None:**  
 Spočítá další generaci buněk podle počtu jejich sousedů.  
 Prochází pouze živé buňky a jejich sousedy, protože ostatní buňky zůstanou nezměněné.
 
@@ -68,7 +68,8 @@ Vytváří se v metodě *reset*, kterou je nutné zavolat před jakýmkoliv kres
 Lze mezi nimi přepínat a tím mřížku „přibližovat / oddalovat“.
 - **m_cell:**  
 Souřadnice buňky, která je zobrazena uprostřed mřížky.  
-Se změnou těchto souřadnic se bude zobrazovat jiná část herní plochy. Obraz se tak může posouvat nahoru, dolů, anebo do stran.
+Se změnou těchto souřadnic se bude zobrazovat jiná část herní plochy.  
+Obraz se tak může posouvat nahoru, dolů, anebo do stran.
 - **canvas_image:**
 Objekt obrázku na plátně *Canvas* z knihovny tkinter.  
 Je natažen na celou velikost plátna, pokud nepřekračuje velikost mřížek.  
