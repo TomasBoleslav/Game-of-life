@@ -73,7 +73,7 @@ Lze mezi nimi přepínat a tím mřížku „přibližovat / oddalovat“.
 Souřadnice buňky, která je zobrazena uprostřed mřížky.  
 Se změnou těchto souřadnic se bude zobrazovat jiná část herní plochy.  
 Obraz se tak může posouvat nahoru, dolů, anebo do stran.
-- **canvas_image:**
+- **canvas_image:**  
 Objekt obrázku na plátně *Canvas* z knihovny tkinter.  
 Je natažen na celou velikost plátna, pokud nepřekračuje velikost mřížek.  
 Nakreslení herní plochy je provedeno změnou jeho parametru *image*.
