@@ -33,8 +33,8 @@ Třídy určené pro výpočet, kreslení a animaci: *Board*, *Rule*, *Painter*,
 Hlavní program se třídami: *FileManager*, *TkState*, *Application*.
 
 ### Třída `Board`
-Obsahuje informace o herní ploše (seznam živých buněk).
-Dovoluje přidávat a odebírat buňky, počítá další generaci buněk.
+Obsahuje informace o herní ploše (seznam živých buněk).  
+Umoožňuje přidávat a odebírat buňky, počítá další generaci buněk.
 
 #### Proměnné:
 - **current:**  
