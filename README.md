@@ -24,10 +24,10 @@ Zejména pro vzhled aplikace byly použity některé knihovny:
 - **Typing** - doplnění některých datových typů pro našeptávač, které nepatří mezi standardní.
 
 ### Moduly
-#### `gol.py`  
+#### `gol.py`
 Třídy určené pro výpočet, kreslení a animaci: *Board*, *Rule*, *Painter*, *Animator*.
-#### `main.py`  
-Určen pouze jako hlavní program. Třídy *FileManager*, *TkState*, *Application*.
+#### `main.py`
+Hlavní program se třídami: *FileManager*, *TkState*, *Application*.
 
 ### Třída Board
 Obsahuje informace o herní ploše (seznam živých buněk).
