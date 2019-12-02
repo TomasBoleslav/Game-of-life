@@ -32,7 +32,7 @@ Třídy určené pro výpočet, kreslení a animaci: *Board*, *Rule*, *Painter*,
 - **main.py:**  
 Hlavní program se třídami: *FileManager*, *TkState*, *Application*.
 
-### Třída Board
+### Třída `Board`
 Obsahuje informace o herní ploše (seznam živých buněk).
 Dovoluje přidávat a odebírat buňky, počítá další generaci buněk.
 
@@ -47,7 +47,7 @@ Seznam souřadnic živých buněk v *current*.
 Spočítá další generaci buněk podle počtu jejich sousedů.  
 Prochází pouze živé buňky a jejich sousedy, protože ostatní buňky zůstanou nezměněné.
 
-### Třída Rule
+### Třída `Rule`
 Slouží pro snadnější nastavování pravidel hry (počtů sousedů) pomocí textového řetězce.
 
 #### Proměnné:
@@ -61,7 +61,7 @@ Množina pro počty sousedů, se kterými zůstane buňka naživu.
 Pokusí se nastavit textový řetězec *value* jako nové pravidlo.  
 Vrací *True*, pokud je pravidlo správné, jinak *False*.
 
-### Třída Painter
+### Třída `Painter`
 Kreslí herní plochu *Board* na plátno *Canvas*.
 
 #### Proměnné:
@@ -87,7 +87,7 @@ Nakreslí herní plochu v těchto krocích:
   - Podle souřadnic buňky kreslené doprostřed (*m_cell*) nakreslí všechny viditelné buňky na vyříznutou mřížku.
   - Výsledný obrázek nastaví jako parametr *image* objektu *canvas_image*.
 
-### Třída Animator
+### Třída `Animator`
 S využitím objektu typu *Painter* kreslí generace buněk za sebou jako animaci.
 
 #### Proměnné:
@@ -100,14 +100,14 @@ Spustí animaci.
 - **stop() -> None:**  
 Pozastaví animaci.
 
-### Třída FileManager
+### Třída `FileManager`
 Statická třída, která načítá a ukládá plochu *Board* do souboru.
 Výsledek zobrazuje v okně se zprávou (*messagebox*).
 
-### Třída TkState
+### Třída `TkState`
 Statická třída, která aktivuje a deaktivuje komponenty *tkinter*.
 
-### Třída Application
+### Třída `Application`
 Propojuje výpočet a grafické rozhraní programu.
 Obsahuje komponenty okna a objekty modulu *gol.py*, se kterými manipuluje podle událostí.
 
