@@ -23,10 +23,11 @@ Zejména pro vzhled aplikace byly použity některé knihovny:
 - **Os** - nalezení cesty k adresáři hlavního programu, která se použije jako výchozí při načítání herní plochy.
 - **Typing** - doplnění některých datových typů pro našeptávač, které nepatří mezi standardní.
 
-### Modul gol.py
-Obsahuje třídy potřebné pro výpočet, kreslení a animaci hry, které se využijí v hlavním programu.
+### Moduly
+**gol.py** - Obsahuje třídy potřebné pro výpočet, kreslení a animaci hry, které se využijí v hlavním programu.
+**main.py** - Určen pouze jako hlavní program. Z důvodu přehlednosti jsou proměnné tříd psány jako veřejné (bez podtržítka).
 
-#### class Board
+### class Board
 Obsahuje informace o herní ploše (seznam živých buněk).
 Dovoluje přidávat a odebírat buňky, počítá další generaci buněk.
 
