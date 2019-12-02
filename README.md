@@ -22,7 +22,7 @@ V popisu tříd jsou uvedeny pouze nejdůležitější datové struktury a metod
 Zejména pro vzhled aplikace byly použity některé knihovny:
 - **Tkinter** - okno programu a jeho komponenty, zpracování událostí od uživatele.
 - **Pillow** - kreslení na obrázek v paměti.
-- **Time** - měření času při animaci.
+- **Time** - měření času mezi snímky animace.
 - **Os** - nalezení cesty k adresáři hlavního programu, která se použije jako výchozí při načítání herní plochy.
 - **Typing** - doplnění některých datových typů pro našeptávač, které nepatří mezi standardní.
 
