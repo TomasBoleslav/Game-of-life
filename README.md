@@ -6,6 +6,14 @@ Implementace [Conwayovy Hry života](https://en.wikipedia.org/wiki/Conway%27s_Ga
 - Přiblížit a oddálit herní plochu.
 - Uložit a načíst sestavu buněk z textového souboru.
 
+## Obsah
+* [Instalace](#instalace)
+* [Použití](#použití)
+* [Dokumentace](#dokumentace)
+* [Návrhy na zlepšení](#návrhy-na-zlepšení)
+
+## Instalace
+
 ## Použití
 Spusťte soubor `main.py`, zobrazí se okno programu. V horním panelu jsou k dispozici tlačítka pro minimalizaci, maximalizaci a zavření okna.
 ![App window](Images/app-window.png)
@@ -55,9 +63,9 @@ Hlavní program se třídami: `FileManager`, `TkState`, `Application`.
 Obsahuje informace o herní ploše (seznam buněk) a stará se o výpočet dalších generací. Umožňuje přidávat a odebírat buňky.
 
 #### Proměnné:
-- **current:**  
+- **current: list**  
 Mřížka současné generace buněk jako 2D seznam proměnných bool (`True` = živá buňka, `False` = mrtvá buňka).
-- **living:**  
+- **living: list**  
 Seznam souřadnic živých buněk v seznamu `current`.
 
 #### Metody:
@@ -69,9 +77,9 @@ Prochází pouze živé buňky a jejich sousedy, protože ostatní buňky zůsta
 Slouží pro snadnější nastavování pravidel hry (počtů sousedů) pomocí textového řetězce.
 
 #### Proměnné:
-- **birth_rule:**  
-Počty sousedů pro narození nové buňky (množina).
-- **remain_rule:**  
+- **birth_rule: set**  
+Počty sousedů pro narození nové buňky.
+- **remain_rule: set**  
 Počty sousedů pro přežití buňky (množina).
 
 #### Metody:
@@ -83,16 +91,16 @@ Vrací `True`, pokud je pravidlo správné, jinak `False`.
 Kreslí herní plochu `Board` na plátno `Canvas`.
 
 #### Proměnné:
-- **grids:**  
+- **grids: list**  
 Obrázky s mřížkou pro různé velikosti buněk. Slouží jako pozadí, na které se budou buňky kreslit.  
 Vytváří se v metodě `reset`, kterou je nutné zavolat před jakýmkoliv kreslením.  
 Lze mezi nimi přepínat a tím mřížku „přibližovat / oddalovat“.
-- **m_cell:**  
+- **m_cell: Tuple[int, int]**  
 Souřadnice buňky, která je zobrazena uprostřed mřížky.  
 Se změnou těchto souřadnic se bude zobrazovat jiná část herní plochy.  
 Obraz se tak může posouvat nahoru, dolů, anebo do stran.
-- **canvas_image:**  
-Objekt obrázku na plátně `Canvas` knihovny `tkinter`.  
+- **canvas_image: int**  
+Obrázek na plátně `Canvas` knihovny `tkinter` (ve skutečnosti jen jeho index).  
 Je natažen na celou velikost plátna, pokud nepřekračuje velikost mřížek.  
 Nakreslení herní plochy je provedeno změnou jeho parametru `image`.
 
@@ -109,8 +117,8 @@ Nakreslí herní plochu v těchto krocích:
 S využitím objektu typu `Painter` kreslí generace buněk za sebou jako animaci.
 
 #### Proměnné:
-- **time_per_gen:**  
-Čas mezi kreslením generací.
+- **time_per_gen: int**  
+Čas mezi kreslením generací v milisekundách.
 
 #### Metody:
 - **play() → None:**  
@@ -119,15 +127,14 @@ Spustí animaci.
 Pozastaví animaci.
 
 ### Třída `FileManager`
-Statická třída, která načítá a ukládá plochu `Board` do souboru.
+Statická třída, která načítá a ukládá `Board` do souboru.
 Výsledek zobrazuje v okně se zprávou (`messagebox`).
 
 ### Třída `TkState`
-Statická třída, která aktivuje a deaktivuje komponenty `tkinter`.
+Statická třída, která aktivuje a deaktivuje komponenty `tkinter` - například deaktivace kreslení při animaci.
 
 ### Třída `Application`
-Propojuje výpočet a grafické rozhraní programu.
-Obsahuje komponenty okna a objekty modulu `gol.py`, se kterými manipuluje podle událostí.
+Propojuje výpočet a grafické rozhraní programu. Obsahuje komponenty okna a objekty modulu `gol.py`, se kterými manipuluje podle událostí.
 
 ## Návrhy na zlepšení
 
@@ -145,7 +152,5 @@ Objekt `Painter` vytváří obrázek pro každou velikost buňky zvlášť. To j
 - Přesunutí na konrétní pozici v mřížce pomocí kolonky a tlačítka.
 - Kreslení nových buněk i po spuštění animace.
 - Změna barvy pozadí, buněk, atd.
-
-## Instalace
 
 
