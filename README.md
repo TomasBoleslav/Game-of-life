@@ -13,7 +13,7 @@ Program umožňuje:
 - Uložit a načíst sestavu buněk z textového souboru.
 
 ## Použití
-![App window](Images/app_window.png)
+![App window](Images/app-window.png)
 
 ## Dokumentace
 V popisu tříd jsou uvedeny pouze nejdůležitější datové struktury a metody.
