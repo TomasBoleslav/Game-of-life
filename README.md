@@ -19,11 +19,9 @@ Spusťte soubor `main.py`, zobrazí se okno programu. V horním panelu jsou k di
 ### Tvorba mřížky
 1. Kliknutím na **New Board** vytvořte prázdnou mřížku.
 2. Buňky kreslete držením levého tlačítka myši. Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování. V pravém menu jsou k dispozici 3 módy:
-
     - **Add** - přidávat buňky.
     - **Remove** - odebírat buňky.
     - **Toggle** - změnit současný stav buňky. Po celou dobu jednoho tahu je nastaven jako *Add* nebo *Remove* podle stavu 1. buňky, na kterou bylo kliknuto.
-    
 3. Plochu přibližujte a oddalujte pomocí posuvníku **Zoom** v pravém menu nebo klávesami "**+**" a "**-**".
 4. Obrazem pohybujte pomocí šipek.
 5. Pro uložení použijte tlačítko **Save**. Zobrazí se dialog, v něm vyberte název souboru a cestu, potvrzením soubor uložte.
@@ -39,7 +37,7 @@ Spusťte soubor `main.py`, zobrazí se okno programu. V horním panelu jsou k di
 Pravidlo hry se zapisuje ve formátu "B*x*/R*y*", kde *x* jsou počty sousedů pro narození buňky a *y* počty sousedů pro přežití. Čísla se v těchto částech nesmí opakovat a nula je zakázána.
 
 Současné pravidlo je označeno nápisem **Rule** nad herní plochou. Změníte jej následovně:
-1. V pravém menu v kolonce pro pravidlo nahraďte text novým pravidlem.
+1. Text kolonky v pravém menu nahraďte novým pravidlem.
 2. Nastavení potvrďte tlačítkem **Set Rule**.
 
 ## Dokumentace
