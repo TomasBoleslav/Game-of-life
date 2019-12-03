@@ -1,4 +1,4 @@
-# Game of life
+# Game of Life
 Implementace [Conwayovy Hry života](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) v okenní aplikaci. Vývoj generací je zobrazován za sebou ve snímcích jako animace. Program umožňuje:
 - Nakreslit počáteční rozložení buněk v dostatečně velké mřížce.
 - Nastavit počty sousedů buněk pro přežití a narození nových.
