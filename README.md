@@ -12,12 +12,10 @@ Spusťte soubor `main.py`, zobrazí se okno programu. V horním panelu jsou k di
 
 ### Tvorba mřížky
 1. Vytvořte prázdnou mřížku kliknutím na **New Board**.
-2. Držením levého tlačítka myši kreslete buňky. Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování. V pravém menu jsou k dispozici 3 módy:
-
+2. Držením levého tlačítka myši kreslete buňky. Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování. V pravém menu jsou k dispozici 3 módy.
     - **Add** - přidat buňku.
     - **Remove** - odebrat buňku.
     - **Toggle** - změnit současný stav buňky. Po celou dobu jednoho tahu je nastaven jako *Add* nebo *Remove* podle stavu 1. buňky, na kterou bylo kliknuto.
-    
 3. Plochu přibližujte a oddalujte pomocí posuvníku **Zoom** v pravém menu nebo klávesami "**+**" a "**-**".
 4. Obrazem pohybujte pomocí šipek.
 5. Pro uložení použijte tlačítko **Save**. Zobrazí se dialog, v něm vyberte název souboru a cestu, potvrzením soubor uložte.
