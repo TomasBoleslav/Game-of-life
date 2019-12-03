@@ -153,7 +153,7 @@ S využitím bitových operací (viz [Rychlost](#rychlost)) se značně ušetř�
 
 ### Ostatní
 - Přesunutí na konrétní pozici v mřížce pomocí kolonky a tlačítka.
-- Kreslení nových buněk i po spuštění animace.
+- Kreslení buněk i po spuštění animace.
 - Změna barvy pozadí, buněk, atd.
 
 
