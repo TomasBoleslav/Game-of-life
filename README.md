@@ -140,14 +140,16 @@ Propojuje výpočet a grafické rozhraní programu. Obsahuje komponenty okna a o
 ## Návrhy na zlepšení
 
 ### Rychlost
-Počítání generací většího počtu buněk je velmi pomalé. To je obzvlášť vidět se změněným pravidlem, kdy se rodí nové buňky pro více různých počtů sousedů (např. *B1/R23*).
+Počítání generací většího počtu buněk je velmi pomalé. Pro nějaká pravidla (např. *B1/R23*) je tento nedostatek ještě zjevnější.
 
 Současně program prochází všechny živé buňky a spočte jejich stav. Výpočet by se dal potenciálně zlepšit:
-- Knihovna `numpy` nabízí datovou strukturu pole, kterým se mohou nahradit seznamy ve standardním Pythonu.
+- Knihovna `numpy` nabízí datovou strukturu pole, kterým se mohou nahradit seznamy standardního Pythonu.
 - Použití bitových operací dokáže redukovat časovou složitost výpočtu z počtu všech prvků na počet řádků. Problém by nastal při kreslení, kdy se v řádcích musí najít živé buňky (1 nebo 0). V nejhorším případě se tak znovu projde celá mřížka.
 
 ### Paměť
-Objekt `Painter` vytváří obrázek pro každou velikost buňky zvlášť. To je zejména kvůli tomu, aby se mřížky nemusely kreslit v každém snímku. Pro rychlejší kreslení tento problém nenastane.
+Objekt `Painter` vytváří obrázek pro každou velikost buňky zvlášť. To je zejména kvůli tomu, aby se mřížky nemusely kreslit v každém snímku. Pro rychlejší kreslení tento problém nenastane a v jednu chvíli by tak mohl existovat pouze 1 obrázek.
+
+S využitím bitových operací (viz [Rychlost](#rychlost)) se značně ušetří na paměti. Každá buňka se uloží jako 1 bit a seznam živých buněk se vůbec nepoužije.
 
 ### Ostatní
 - Přesunutí na konrétní pozici v mřížce pomocí kolonky a tlačítka.
