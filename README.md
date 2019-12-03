@@ -1,7 +1,4 @@
 # Game of life
-
-## Specifikace
-
 Implementace [Conwayovy Hry života](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) v okenní aplikaci.
 
 Vývoj generací je zobrazován za sebou ve snímcích jako animace.
