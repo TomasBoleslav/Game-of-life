@@ -17,7 +17,7 @@ Implementace [Conwayovy Hry života](https://en.wikipedia.org/wiki/Conway%27s_Ga
 ## Použití
 Spusťte soubor `main.py`, zobrazí se okno programu. V horním panelu jsou k dispozici tlačítka pro minimalizaci, maximalizaci a zavření okna.
 
-<img src="Images/app-window.png" height="444" width="675" />
+<img src="Images/window.png" height="444" width="675" />
 
 ### Tvorba mřížky
 1. Vytvořte prázdnou mřížku kliknutím na **New Board**.
