@@ -13,7 +13,21 @@ Program umožňuje:
 - Uložit a načíst sestavu buněk z textového souboru.
 
 ## Použití
+Spusťte soubor `main.py`, zobrazí se okno programu. V horním panelu jsou k dispozici tlačítka pro minimalizaci, maximalizaci a zavření okna.
 ![App window](Images/app-window.png)
+
+### Tvorba mřížky
+1. Vytvořte prázdnou mřížku stisknutím tlačítka **New Board**.
+2. Buňky kreslete držením levého tlačítka myši. V pravém menu jsou k dispozici 3 módy:  
+  - **Add** - přidávat buňky.
+  - **Remove** - odebírat buňky.
+  - **Toggle** - změnit současný stav buňky. Po celou dobu jednoho tahu je nastaven jako *Add* nebo *Remove* podle stavu 1. buňky, na kterou bylo kliknuto.
+3. Plochu můžete přiblížit nebo oddálit pomocí posuvníku **Zoom** v pravém menu, nebo klávesami *+* a *-*.
+3. Pro uložení mřížky klikněte na tlačítko **Save**. Otevře se dialog, ve kterém vyberete název souboru a cestu, potvrzením soubor uložíte.
+4. Načtení provedete kliknutím na **Open**. Objeví se dialog, kde najdete příslušný soubor a potvrdíte.
+
+### Animace
+
 
 ## Dokumentace
 V popisu tříd jsou uvedeny pouze nejdůležitější datové struktury a metody.
