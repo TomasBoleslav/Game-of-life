@@ -144,10 +144,10 @@ Počítání generací většího počtu buněk je velmi pomalé. To je obzvlá�
 
 Současně program prochází všechny živé buňky a spočte jejich stav. Výpočet by se dal potenciálně zlepšit:
 - Knihovna `numpy` nabízí datovou strukturu pole, kterým se mohou nahradit seznamy ve standardním Pythonu.
-- Použití bitových operací dokáže redukovat časovou složitost z počtu všech prvků na počet řádků. Problém by nastal při kreslení, kdy se v řádcích musí najít živé buňky (1 nebo 0). V nejhorším případě se tak znovu projde celá mřížka.
+- Použití bitových operací dokáže redukovat časovou složitost výpočtu z počtu všech prvků na počet řádků. Problém by nastal při kreslení, kdy se v řádcích musí najít živé buňky (1 nebo 0). V nejhorším případě se tak znovu projde celá mřížka.
 
 ### Paměť
-Objekt `Painter` vytváří obrázek pro každou velikost buňky zvlášť. To je zejména kvůli tomu, aby se předkreslily čáry mřížky a nemusely se kreslit v každém snímku. Pro rychlejší kreslení tento problém nenastane.
+Objekt `Painter` vytváří obrázek pro každou velikost buňky zvlášť. To je zejména kvůli tomu, aby se mřížky nemusely kreslit v každém snímku. Pro rychlejší kreslení tento problém nenastane.
 
 ### Ostatní
 - Přesunutí na konrétní pozici v mřížce pomocí kolonky a tlačítka.
