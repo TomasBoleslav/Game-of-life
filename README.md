@@ -17,24 +17,26 @@ Spusťte soubor `main.py`, zobrazí se okno programu. V horním panelu jsou k di
 ![App window](Images/app-window.png)
 
 ### Tvorba mřížky
-1. Kliknutím na **New Board** vytvořte prázdnou mřížku.
-2. Buňky kreslete držením levého tlačítka myši. Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování. V pravém menu jsou k dispozici 3 módy.
-    - **Add** - přidávat buňky.
-    - **Remove** - odebírat buňky.
+1. Vytvořte prázdnou mřížku kliknutím na **New Board**.
+2. Držením levého tlačítka myši kreslete buňky. Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování. V pravém menu jsou k dispozici 3 módy:
+
+    - **Add** - přidat buňku.
+    - **Remove** - odebrat buňku.
     - **Toggle** - změnit současný stav buňky. Po celou dobu jednoho tahu je nastaven jako *Add* nebo *Remove* podle stavu 1. buňky, na kterou bylo kliknuto.
+    
 3. Plochu přibližujte a oddalujte pomocí posuvníku **Zoom** v pravém menu nebo klávesami "**+**" a "**-**".
 4. Obrazem pohybujte pomocí šipek.
 5. Pro uložení použijte tlačítko **Save**. Zobrazí se dialog, v něm vyberte název souboru a cestu, potvrzením soubor uložte.
-6. Načtení provedete kliknutím na **Open**. V dialogu najděte příslušný soubor a potvrďte.
+6. Načtení provedete kliknutím na **Open**. V dialogu nalezněte příslušný soubor a potvrďte.
 
 ### Animace
 1. Animaci spusťte tlačítkem **Play**. Text tlačítka se změní na **Stop** a opětovným kliknutím animaci pozastavíte.
 2. Rychlost animace lze upravit posuvníkem **Speed** v pravém menu.
-3. Číslo současné generace je označen nápisem **Gen**.
+3. Číslo současné generace je označeno nápisem **Gen**.
 4. Animaci resetujete pomocí tlačítka **Reset**.
 
 ### Změna pravidla
-Pravidlo hry se zapisuje ve formátu "B*x*/R*y*", kde *x* jsou počty sousedů pro narození buňky a *y* počty sousedů pro přežití. Čísla se v těchto částech nesmí opakovat a nula je zakázána.
+TODO: Pravidlo hry se zapisuje ve formátu "B*x*/R*y*", kde *x* jsou počty sousedů pro narození buňky a *y* počty sousedů pro přežití. Čísla se v těchto částech nesmí opakovat a nula je zakázána.
 
 Současné pravidlo je označeno nápisem **Rule** nad herní plochou. Změníte jej následovně:
 1. Text kolonky v pravém menu nahraďte novým pravidlem.
@@ -49,7 +51,7 @@ Zejména pro vzhled aplikace byly použity některé knihovny:
 - **Pillow** - kreslení na obrázek v paměti.
 - **Time** - měření času mezi snímky animace.
 - **Os** - nalezení cesty k adresáři hlavního programu, která se použije jako výchozí při načítání herní plochy.
-- **Typing** - doplnění některých datových typů pro našeptávač, které nepatří mezi standardní.
+- **Typing** - označení proměnných datovými typy, které nepatří mezi standardní.
 
 ### Moduly
 - **gol.py:**  
@@ -58,8 +60,7 @@ Třídy určené pro výpočet, kreslení a animaci: `Board`, `Rule`, `Painter`,
 Hlavní program se třídami: `FileManager`, `TkState`, `Application`.
 
 ### Třída `Board`
-Obsahuje informace o herní ploše (seznam buněk) a stará se o výpočet dalších generací.
-Umožňuje přidávat a odebírat buňky.
+Obsahuje informace o herní ploše (seznam buněk) a stará se o výpočet dalších generací. Umožňuje přidávat a odebírat buňky.
 
 #### Proměnné:
 - **current:**  
@@ -77,9 +78,9 @@ Slouží pro snadnější nastavování pravidel hry (počtů sousedů) pomocí 
 
 #### Proměnné:
 - **birth_rule:**  
-Množina pro počty sousedů, které způsobí narození nové buňky.
+Počty sousedů pro narození nové buňky (množina).
 - **remain_rule:**  
-Množina pro počty sousedů, se kterými zůstane buňka naživu.
+Počty sousedů pro přežití buňky (množina).
 
 #### Metody:
 - **try_set_rule(value: str) → bool:**  
@@ -92,7 +93,7 @@ Kreslí herní plochu `Board` na plátno `Canvas`.
 #### Proměnné:
 - **grids:**  
 Obrázky s mřížkou pro různé velikosti buněk. Slouží jako pozadí, na které se budou buňky kreslit.  
-Vytváří se v metodě *reset*, kterou je nutné zavolat před jakýmkoliv kreslením.  
+Vytváří se v metodě `reset`, kterou je nutné zavolat před jakýmkoliv kreslením.  
 Lze mezi nimi přepínat a tím mřížku „přibližovat / oddalovat“.
 - **m_cell:**  
 Souřadnice buňky, která je zobrazena uprostřed mřížky.  
@@ -101,7 +102,7 @@ Obraz se tak může posouvat nahoru, dolů, anebo do stran.
 - **canvas_image:**  
 Objekt obrázku na plátně `Canvas` knihovny `tkinter`.  
 Je natažen na celou velikost plátna, pokud nepřekračuje velikost mřížek.  
-Nakreslení herní plochy je provedeno změnou jeho parametru *image*.
+Nakreslení herní plochy je provedeno změnou jeho parametru `image`.
 
 #### Metody:
 - **reset() → None:**  
@@ -116,7 +117,7 @@ Nakreslí herní plochu v těchto krocích:
 S využitím objektu typu `Painter` kreslí generace buněk za sebou jako animaci.
 
 #### Proměnné:
-- **time_per_gen**:  
+- **time_per_gen:**  
 Čas mezi kreslením generací.
 
 #### Metody:
