@@ -17,17 +17,22 @@ Spusťte soubor `main.py`, zobrazí se okno programu. V horním panelu jsou k di
 ![App window](Images/app-window.png)
 
 ### Tvorba mřížky
-1. Vytvořte prázdnou mřížku stisknutím tlačítka **New Board**.
+1. Kliknutím na **New Board** vytvořte prázdnou mřížku.
 2. Buňky kreslete držením levého tlačítka myši. V pravém menu jsou k dispozici 3 módy:  
   - **Add** - přidávat buňky.
   - **Remove** - odebírat buňky.
-  - **Toggle** - změnit současný stav buňky. Po celou dobu jednoho tahu je nastaven jako *Add* nebo *Remove* podle stavu 1. buňky, na kterou bylo kliknuto.
-3. Plochu můžete přiblížit nebo oddálit pomocí posuvníku **Zoom** v pravém menu, nebo klávesami *+* a *-*.
-3. Pro uložení mřížky klikněte na tlačítko **Save**. Otevře se dialog, ve kterém vyberete název souboru a cestu, potvrzením soubor uložíte.
-4. Načtení provedete kliknutím na **Open**. Objeví se dialog, kde najdete příslušný soubor a potvrdíte.
+  - **Toggle** - změnit současný stav buňky. Po celou dobu jednoho tahu je nastaven jako *Add* nebo *Remove* podle stavu 1. buňky, na kterou bylo kliknuto.  
+  Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování.
+3. Plochu přibližujte a oddalujte pomocí posuvníku **Zoom** v pravém menu nebo klávesami **+** a **-**.
+4. Na mřížce se pohybujte se pomocí šipek.
+5. Pro uložení klikněte na tlačítko **Save**. Zobrazí se dialog, v něm vyberte název souboru a cestu, potvrzením soubor uložte.
+6. Načtení provedete kliknutím na **Open**. V dialogu najděte příslušný soubor a potvrďte.
 
 ### Animace
-
+1. Animaci spusťte tlačítkem **Play**. Text tlačítka se změní na **Stop** a opětovným kliknutím animaci pozastavíte.
+2. Rychlost animace lze upravit posuvníkem **Speed** v pravém menu.
+3. Číslo současné generace je označen nápisem **Gen**.
+4. Animaci resetujete pomocí tlačítka **Reset**.
 
 ## Dokumentace
 V popisu tříd jsou uvedeny pouze nejdůležitější datové struktury a metody.
@@ -99,7 +104,7 @@ Vytváří obrázky mřížek pro zadané velikosti.
 Nakreslí herní plochu v těchto krocích:
   - Ořízne prostřední část mřížky z `grids` na velikost plátna.
   - Podle souřadnic buňky kreslené doprostřed (`m_cell`) nakreslí všechny viditelné buňky na vyříznutou mřížku.
-  - Výsledný obrázek nastaví jako parametr *image* objektu `canvas_image`.
+  - Výsledný obrázek nastaví jako parametr `image` objektu `canvas_image`.
 
 ### Třída `Animator`
 S využitím objektu typu `Painter` kreslí generace buněk za sebou jako animaci.
