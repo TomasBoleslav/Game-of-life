@@ -57,7 +57,7 @@ Třídy určené pro výpočet, kreslení a animaci: `Board`, `Rule`, `Painter`,
 - **main.py:**  
 Hlavní program se třídami: `FileManager`, `TkState`, `Application`.
 
-### `Board`
+### Třída `Board`
 Obsahuje informace o herní ploše (seznam buněk) a stará se o výpočet dalších generací.
 Umožňuje přidávat a odebírat buňky.
 
@@ -72,17 +72,21 @@ Seznam souřadnic živých buněk v seznamu `current`.
 Spočítá další generaci buněk podle počtu jejich sousedů.  
 Prochází pouze živé buňky a jejich sousedy, protože ostatní buňky zůstanou nezměněné.
 
-### `Rule`
+### Třída `Rule`
 Slouží pro snadnější nastavování pravidel hry (počtů sousedů) pomocí textového řetězce.
+
+#### Proměnné:
 - **birth_rule**  
 Množina pro počty sousedů, které způsobí narození nové buňky.
 - **remain_rule**  
 Množina pro počty sousedů, se kterými zůstane buňka naživu.
+
+#### Metody:
 - **try_set_rule(value: str) → bool:**  
 Pokusí se nastavit textový řetězec `value` jako nové pravidlo.  
 Vrací `True`, pokud je pravidlo správné, jinak `False`.
 
-### `Painter`
+### Třída `Painter`
 Kreslí herní plochu `Board` na plátno `Canvas`.
 
 #### Proměnné:
@@ -108,7 +112,7 @@ Nakreslí herní plochu v těchto krocích:
   - Podle souřadnic buňky kreslené doprostřed (`m_cell`) nakreslí všechny viditelné buňky na vyříznutou mřížku.
   - Výsledný obrázek nastaví jako parametr `image` objektu `canvas_image`.
 
-### `Animator`
+### Třída `Animator`
 S využitím objektu typu `Painter` kreslí generace buněk za sebou jako animaci.
 
 #### Proměnné:
