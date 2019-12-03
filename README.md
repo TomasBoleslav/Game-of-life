@@ -76,9 +76,9 @@ Prochází pouze živé buňky a jejich sousedy, protože ostatní buňky zůsta
 Slouží pro snadnější nastavování pravidel hry (počtů sousedů) pomocí textového řetězce.
 
 #### Proměnné:
-- **birth_rule**  
+- **birth_rule:**  
 Množina pro počty sousedů, které způsobí narození nové buňky.
-- **remain_rule**  
+- **remain_rule:**  
 Množina pro počty sousedů, se kterými zůstane buňka naživu.
 
 #### Metody:
@@ -135,4 +135,24 @@ Statická třída, která aktivuje a deaktivuje komponenty `tkinter`.
 ### Třída `Application`
 Propojuje výpočet a grafické rozhraní programu.
 Obsahuje komponenty okna a objekty modulu `gol.py`, se kterými manipuluje podle událostí.
+
+## Návrhy na zlepšení
+
+### Rychlost
+Počítání generací většího počtu buněk je velmi pomalé. To je obzvlášť vidět se změněným pravidlem, kdy se rodí nové buňky pro více různých počtů sousedů (např. *B1/R23*).
+
+Současně program prochází všechny živé buňky a spočte jejich stav. Výpočet by se dal potenciálně zlepšit:
+- Knihovna `numpy` nabízí datovou strukturu pole, kterým se mohou nahradit seznamy ve standardním Pythonu.
+- Použití bitových operací dokáže redukovat časovou složitost z počtu všech prvků na počet řádků. Problém by nastal při kreslení, kdy se v řádcích musí najít živé buňky (1 nebo 0). V nejhorším případě se tak znovu projde celá mřížka.
+
+### Paměť
+Objekt `Painter` vytváří obrázek pro každou velikost buňky zvlášť. To je zejména kvůli tomu, aby se předkreslily čáry mřížky a nemusely se kreslit v každém snímku. Pro rychlejší kreslení tento problém nenastane.
+
+### Ostatní
+- Přesunutí na konrétní pozici v mřížce pomocí kolonky a tlačítka.
+- Kreslení nových buněk i po spuštění animace.
+- Změna barvy pozadí, buněk, atd.
+
+## Instalace
+
 
