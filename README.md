@@ -22,9 +22,8 @@ Spusťte soubor `main.py`, zobrazí se okno programu. V horním panelu jsou k di
 
     - **Add** - přidávat buňky.
     - **Remove** - odebírat buňky.
-    - **Toggle** - změnit současný stav buňky. Po celou dobu jednoho tahu je nastaven jako *Add* nebo *Remove* podle stavu 1. buňky, na kterou bylo kliknuto.
-    
-  Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování.
+    - **Toggle** - změnit současný stav buňky. Po celou dobu jednoho tahu je nastaven jako *Add* nebo *Remove* podle stavu 1. buňky, na kterou bylo kliknuto.  
+    Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování.
 3. Plochu přibližujte a oddalujte pomocí posuvníku **Zoom** v pravém menu nebo klávesami **+** a **-**.
 4. Na mřížce se pohybujte se pomocí šipek.
 5. Pro uložení klikněte na tlačítko **Save**. Zobrazí se dialog, v něm vyberte název souboru a cestu, potvrzením soubor uložte.
