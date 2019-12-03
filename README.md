@@ -13,7 +13,7 @@ Program umožňuje:
 - Uložit a načíst sestavu buněk z textového souboru.
 
 ## Použití
-
+[App window](https://github.com/TomasBoleslav/Game-of-life/blob/master/Images/app_window.png)
 
 ## Dokumentace
 V popisu tříd jsou uvedeny pouze nejdůležitější datové struktury a metody.
