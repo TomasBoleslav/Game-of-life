@@ -16,22 +16,24 @@ Implementace [Conwayovy Hry života](https://en.wikipedia.org/wiki/Conway%27s_Ga
 
 ## Použití
 Spusťte soubor `main.py`, zobrazí se okno programu. V horním panelu jsou k dispozici tlačítka pro minimalizaci, maximalizaci a zavření okna.
+
+<img src="Images/app-window.png" height="24" width="48">
 ![App window](Images/app-window.png)
 
 ### Tvorba mřížky
 1. Vytvořte prázdnou mřížku kliknutím na **New Board**.
-2. Držením levého tlačítka myši kreslete buňky. Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování. V pravém menu jsou k dispozici 3 módy.
+2. Držením levého tlačítka myši můžete kreslit buňky. Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování. V pravém menu jsou k dispozici 3 módy.
     - **Add** - přidat buňku.
     - **Remove** - odebrat buňku.
     - **Toggle** - změnit současný stav buňky. Po celou dobu jednoho tahu je nastaven jako *Add* nebo *Remove* podle stavu 1. buňky, na kterou bylo kliknuto.
-3. Plochu přibližujte a oddalujte pomocí posuvníku **Zoom** v pravém menu nebo klávesami "**+**" a "**-**".
+3. Plochu přibližujte a oddalujte pomocí posuvníku **Zoom** nebo klávesami "**+**" a "**-**".
 4. Obrazem pohybujte pomocí šipek.
 5. Pro uložení použijte tlačítko **Save**. Zobrazí se dialog, v něm vyberte název souboru a cestu, potvrzením soubor uložte.
 6. Načtení provedete kliknutím na **Open**. V dialogu nalezněte příslušný soubor a potvrďte.
 
 ### Animace
 1. Animaci spusťte tlačítkem **Play**. Text tlačítka se změní na **Stop** a opětovným kliknutím animaci pozastavíte.
-2. Rychlost animace lze upravit posuvníkem **Speed** v pravém menu.
+2. Rychlost animace lze upravit posuvníkem **Speed**.
 3. Číslo současné generace je označeno nápisem **Gen**.
 4. Animaci resetujete pomocí tlačítka **Reset**.
 
