@@ -18,7 +18,7 @@ Spusťte soubor `main.py`, zobrazí se okno programu. V horním panelu jsou k di
 
 ### Tvorba mřížky
 1. Kliknutím na **New Board** vytvořte prázdnou mřížku.
-2. Buňky kreslete držením levého tlačítka myši. Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování. V pravém menu jsou k dispozici 3 módy:
+2. Buňky kreslete držením levého tlačítka myši. Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování. V pravém menu jsou k dispozici 3 módy.
     - **Add** - přidávat buňky.
     - **Remove** - odebírat buňky.
     - **Toggle** - změnit současný stav buňky. Po celou dobu jednoho tahu je nastaven jako *Add* nebo *Remove* podle stavu 1. buňky, na kterou bylo kliknuto.
@@ -68,20 +68,16 @@ Mřížka současné generace buněk jako 2D seznam proměnných bool (`True` = 
 Seznam souřadnic živých buněk v seznamu `current`.
 
 #### Metody:
-- **next_gen() -> None:**  
+- **next_gen() → None:**  
 Spočítá další generaci buněk podle počtu jejich sousedů.  
 Prochází pouze živé buňky a jejich sousedy, protože ostatní buňky zůstanou nezměněné.
 
 ### Třída `Rule`
 Slouží pro snadnější nastavování pravidel hry (počtů sousedů) pomocí textového řetězce.
-
-#### Proměnné:
 - **birth_rule:**  
 Množina pro počty sousedů, které způsobí narození nové buňky.
 - **remain_rule:**  
 Množina pro počty sousedů, se kterými zůstane buňka naživu.
-
-#### Metody:
 - **try_set_rule(value: str) → bool:**  
 Pokusí se nastavit textový řetězec `value` jako nové pravidlo.  
 Vrací `True`, pokud je pravidlo správné, jinak `False`.
@@ -104,9 +100,9 @@ Je natažen na celou velikost plátna, pokud nepřekračuje velikost mřížek.
 Nakreslení herní plochy je provedeno změnou jeho parametru *image*.
 
 #### Metody:
-- **reset() -> None:**  
+- **reset() → None:**  
 Vytváří obrázky mřížek pro zadané velikosti.
-- **draw_board() -> None:**  
+- **draw_board() → None:**  
 Nakreslí herní plochu v těchto krocích:
   - Ořízne prostřední část mřížky z `grids` na velikost plátna.
   - Podle souřadnic buňky kreslené doprostřed (`m_cell`) nakreslí všechny viditelné buňky na vyříznutou mřížku.
@@ -120,9 +116,9 @@ S využitím objektu typu `Painter` kreslí generace buněk za sebou jako animac
 Čas mezi kreslením generací.
 
 #### Metody:
-- **play() -> None:**  
+- **play() → None:**  
 Spustí animaci.
-- **stop() -> None:**  
+- **stop() → None:**  
 Pozastaví animaci.
 
 ### Třída `FileManager`
