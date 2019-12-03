@@ -38,7 +38,7 @@ Spusťte soubor `main.py`, zobrazí se okno programu. V horním panelu jsou k di
 ### Změna pravidla
 Pravidlo hry se zapisuje ve formátu "B*x*/R*y*", kde *x* jsou počty sousedů pro narození buňky a *y* počty sousedů pro přežití. Čísla se v těchto částech nesmí opakovat a nula je zakázána.
 
-Současné pravidlo je označeno nápisem **Rule**. Změníte jej následovně:
+Současné pravidlo je označeno nápisem **Rule** nad herní plochou. Změníte jej následovně:
 1. V pravém menu v kolonce pro pravidlo nahraďte text novým pravidlem.
 2. Nastavení potvrďte tlačítkem **Set Rule**.
 
