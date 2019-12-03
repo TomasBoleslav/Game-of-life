@@ -74,11 +74,11 @@ Prochází pouze živé buňky a jejich sousedy, protože ostatní buňky zůsta
 
 ### Třída `Rule`
 Slouží pro snadnější nastavování pravidel hry (počtů sousedů) pomocí textového řetězce.
-#### `birth_rule`  
+- **birth_rule**  
 Množina pro počty sousedů, které způsobí narození nové buňky.
-#### `remain_rule`
+- **remain_rule**  
 Množina pro počty sousedů, se kterými zůstane buňka naživu.
-#### `try_set_rule(value: str) → bool:`
+- **try_set_rule(value: str) → bool:**  
 Pokusí se nastavit textový řetězec `value` jako nové pravidlo.  
 Vrací `True`, pokud je pravidlo správné, jinak `False`.
 
