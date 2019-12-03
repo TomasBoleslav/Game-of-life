@@ -15,7 +15,7 @@ Implementace [Conwayovy Hry života](https://en.wikipedia.org/wiki/Conway%27s_Ga
 ## Instalace
 
 ## Použití
-Spusťte soubor `main.py`, zobrazí se okno programu. V horním panelu jsou k dispozici tlačítka pro minimalizaci, maximalizaci a zavření okna.
+Spusťte soubor [main.py](game-of-life/main.py), zobrazí se okno programu. V horním panelu jsou k dispozici tlačítka pro minimalizaci, maximalizaci a zavření okna.
 
 <img src="images/window.png" height="444" width="675" />
 
@@ -93,26 +93,20 @@ Kreslí herní plochu `Board` na plátno `Canvas`.
 
 #### Proměnné:
 - **grids: list**  
-Obrázky s mřížkou pro různé velikosti buněk. Slouží jako pozadí, na které se budou buňky kreslit.  
-Vytváří se v metodě `reset`, kterou je nutné zavolat před jakýmkoliv kreslením.  
-Lze mezi nimi přepínat a tím mřížku „přibližovat / oddalovat“.
+Obrázky s mřížkou pro různé velikosti buněk. Slouží jako pozadí, na které se budou buňky kreslit. Vytváří se v metodě `reset`, kterou je nutné zavolat před jakýmkoliv kreslením. Lze mezi nimi přepínat a tím mřížku „přibližovat / oddalovat“.
 - **m_cell: Tuple[int, int]**  
-Souřadnice buňky, která je zobrazena uprostřed mřížky.  
-Se změnou těchto souřadnic se bude zobrazovat jiná část herní plochy.  
-Obraz se tak může posouvat nahoru, dolů, anebo do stran.
+Souřadnice buňky, která je zobrazena uprostřed mřížky. Se změnou těchto souřadnic se bude zobrazovat jiná část herní plochy. Obraz se tak může posouvat nahoru, dolů, anebo do stran.
 - **canvas_image: int**  
-Obrázek na plátně `Canvas` knihovny `tkinter` (ve skutečnosti jen jeho index).  
-Je natažen na celou velikost plátna, pokud nepřekračuje velikost mřížek.  
-Nakreslení herní plochy je provedeno změnou jeho parametru `image`.
+Obrázek na plátně `Canvas` knihovny `tkinter` (ve skutečnosti jen jeho index). Je natažen na celou velikost plátna, pokud nepřekračuje velikost mřížek. Nakreslení herní plochy je provedeno změnou jeho parametru `image`.
 
 #### Metody:
-- **reset() → None:**  
+- **reset(...,cell_sizes: list,...) → None:**  
 Vytváří obrázky mřížek pro zadané velikosti.
 - **draw_board() → None:**  
 Nakreslí herní plochu v těchto krocích:
   - Ořízne prostřední část mřížky z `grids` na velikost plátna.
-  - Podle souřadnic buňky kreslené doprostřed (`m_cell`) nakreslí všechny viditelné buňky na vyříznutou mřížku.
-  - Výsledný obrázek nastaví jako parametr `image` objektu `canvas_image`.
+  - Podle souřadnic buňky kreslené doprostřed (`m_cell`) nakreslí všechny viditelné buňky na oříznutou mřížku.
+  - Výsledný obrázek nastaví jako parametr `image` obrázku `canvas_image`.
 
 ### Třída `Animator`
 S využitím objektu typu `Painter` kreslí generace buněk za sebou jako animaci.
