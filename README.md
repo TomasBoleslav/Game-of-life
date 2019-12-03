@@ -37,7 +37,7 @@ Spusťte soubor `main.py`, zobrazí se okno programu. V horním panelu jsou k di
 4. Animaci resetujete pomocí tlačítka **Reset**.
 
 ### Změna pravidla
-TODO: Pravidlo hry se zapisuje ve formátu "B*x*/R*y*", kde *x* jsou počty sousedů pro narození buňky a *y* počty sousedů pro přežití. Čísla se v těchto částech nesmí opakovat a nula je zakázána.
+Pravidlo hry se zapisuje ve formátu "B*x*/R*y*", kde *x* jsou počty sousedů pro narození buňky a *y* počty sousedů pro přežití. Čísla se v těchto částech nesmí opakovat a nula je zakázána.
 
 Současné pravidlo je označeno nápisem **Rule** nad herní plochou. Změníte jej následovně:
 1. Text kolonky v pravém menu nahraďte novým pravidlem.
