@@ -2,7 +2,7 @@
 
 ## Specifikace
 
-Implementace [Conwayovy Hry života](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) v okenní aplikaci.
+Implementace [Conwayovy Hry života](Images/app_window.png) v okenní aplikaci.
 
 Vývoj generací buněk je zobrazován za sebou ve snímcích jako animace.
 Program umožňuje:
