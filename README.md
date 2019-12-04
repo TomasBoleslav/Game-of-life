@@ -17,8 +17,8 @@ Před spuštěním programu si musíte nainstalovat [Python](https://www.python.
 
 Spolu s Pythonem se stáhne program pip. S jeho pomocí nainstalujte knihovnu [Pillow](https://pillow.readthedocs.io/en/stable/installation.html):
 1. Otevřete příkazový řádek jako správce.
-2. Stáhněte Pillow příkazem:  
-``> Path\pip install Pillow``,  
+2. Stáhněte knihovnu příkazem:  
+``Path\pip install Pillow``,  
 kde `Path` je cesta k programu pip na vašem počítači.
 
 ## Použití
