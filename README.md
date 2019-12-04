@@ -59,7 +59,7 @@ Zejména pro vzhled aplikace byly použity některé knihovny:
 - **Tkinter** - okno programu a jeho komponenty, zpracování událostí od uživatele.
 - **Pillow** - kreslení na obrázek v paměti.
 - **Time** - měření času mezi snímky animace.
-- **Os** - nalezení cesty k adresáři hlavního programu, která se použije jako výchozí při načítání herní plochy.
+- **Os** - nalezení cesty k adresáři hlavního programu, která se použije jako výchozí při načítání hry ze souboru.
 - **Sys** - předčasné ukončení programu.
 - **Typing** - označení proměnných datovými typy, které nepatří mezi standardní.
 
