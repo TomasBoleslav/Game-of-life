@@ -2,7 +2,7 @@
 from typing import Tuple
 import time
 import math
-from tkinter import *
+from tkinter import Canvas
 import sys
 try:
     from PIL import Image as Img
