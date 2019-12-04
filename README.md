@@ -89,13 +89,13 @@ Seznam souřadnic (dvojice celých čísel) živých buněk v seznamu `current`.
 Spočítá další generaci buněk podle počtu jejich sousedů. Prochází pouze živé buňky a jejich sousedy, protože ostatní buňky zůstanou nezměněné.
 
 ### Třída `Rule`
-Slouží pro snadnější nastavování pravidel hry (počtů sousedů) pomocí textového řetězce.
+Slouží pro snadnější nastavování pravidel hry (počtů sousedů) pomocí textového řetězce. Uloží si množiny čísel, které se pak mohou předat objektu `Board` a ten podle nich přizpůsobí výpočet dalších generací.
 
 #### Proměnné:
 - **birth_rule: set**  
 Počty sousedů pro narození nové buňky.
 - **remain_rule: set**  
-Počty sousedů pro přežití buňky (množina).
+Počty sousedů pro přežití buňky.
 
 #### Metody:
 - **try_set_rule(value: str) → bool:**  
