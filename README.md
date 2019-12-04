@@ -1,10 +1,10 @@
 # Game of Life
 Implementace [Conwayovy Hry života](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) v okenní aplikaci. Vývoj generací je zobrazován za sebou ve snímcích jako animace. Program umožňuje:
-- Nakreslit počáteční rozložení buněk v dostatečně velké mřížce.
+- Nakreslit počáteční rozložení buněk.
 - Nastavit počty sousedů buněk pro přežití a narození nových.
 - Změnit rychlost animace na některou z přednastavených hodnot.
 - Přiblížit a oddálit herní plochu.
-- Uložit a načíst sestavu buněk z textového souboru.
+- Uložit a načíst sestavu buněk.
 
 ## Obsah
 * [Instalace](#instalace)
@@ -15,8 +15,8 @@ Implementace [Conwayovy Hry života](https://en.wikipedia.org/wiki/Conway%27s_Ga
 ## Instalace
 Před spuštěním programu si musíte nainstalovat [Python](https://www.python.org/downloads/).
 
-Spolu s Pythonem se stáhne program pip. Pomocí něj si stáhněte knihovnu [Pillow](https://pillow.readthedocs.io/en/stable/installation.html):
-1. Otevřte příkazový řádek jako správce.
+Spolu s Pythonem se stáhne program pip. S jeho pomocí nainstalujte knihovnu [Pillow](https://pillow.readthedocs.io/en/stable/installation.html):
+1. Otevřete příkazový řádek jako správce.
 2. Stáhněte Pillow příkazem:  
 ``> Path\pip install Pillow``,  
 kde `Path` je cesta k programu pip na vašem počítači.
@@ -27,7 +27,7 @@ Spusťte soubor [main.py](game-of-life/main.py), zobrazí se okno programu. V ho
 <img src="images/window.png" height="444" width="675" />
 
 ### Tvorba mřížky
-1. Vytvořte prázdnou mřížku kliknutím na **New Board**.
+1. Prázdnou mřížku vytvoříte kliknutím na **New Board**.
 2. Držením levého tlačítka myši můžete kreslit buňky. Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování. V pravém menu jsou k dispozici 3 módy.
     - **Add** - přidat buňku.
     - **Remove** - odebrat buňku.
@@ -51,7 +51,7 @@ Současné pravidlo je označeno nápisem **Rule** nad herní plochou. Změníte
 2. Nastavení potvrďte tlačítkem **Set Rule**.
 
 ## Dokumentace
-V popisu tříd jsou uvedeny pouze nejdůležitější datové struktury a metody.
+Detaily najdete v kódu programu, zde jsou uvedeny pouze nejdůležitější metody a datové struktury.
 
 ### Použité knihovny
 Zejména pro vzhled aplikace byly použity některé knihovny:
@@ -59,6 +59,7 @@ Zejména pro vzhled aplikace byly použity některé knihovny:
 - **Pillow** - kreslení na obrázek v paměti.
 - **Time** - měření času mezi snímky animace.
 - **Os** - nalezení cesty k adresáři hlavního programu, která se použije jako výchozí při načítání herní plochy.
+- **Sys** - předčasné ukončení programu.
 - **Typing** - označení proměnných datovými typy, které nepatří mezi standardní.
 
 ### Moduly
@@ -74,7 +75,7 @@ Obsahuje informace o herní ploše (seznam buněk) a stará se o výpočet dalš
 - **current: list**  
 Mřížka současné generace buněk jako 2D seznam proměnných bool (`True` = živá buňka, `False` = mrtvá buňka).
 - **living: list**  
-Seznam souřadnic živých buněk v seznamu `current`.
+Seznam souřadnic (dvojice celých čísel) živých buněk v seznamu `current`.
 
 #### Metody:
 - **next_gen() → None:**  
@@ -141,11 +142,11 @@ Propojuje výpočet a grafické rozhraní programu. Obsahuje komponenty okna a o
 ## Návrhy na zlepšení
 
 ### Rychlost
-Počítání generací většího počtu buněk je velmi pomalé. Pro nějaká pravidla (např. *B1/R23*) je tento nedostatek ještě zjevnější.
+U většího počtu buněk nebo některých pravidel (např. *B1/R23*) je vidět, že počítání generací je velmi pomalé.
 
 Současně program prochází všechny živé buňky a spočte jejich stav. Výpočet by se dal potenciálně zlepšit:
 - Knihovna `numpy` nabízí datovou strukturu pole, kterým se mohou nahradit seznamy standardního Pythonu.
-- Použití bitových operací dokáže redukovat časovou složitost výpočtu z počtu všech prvků na počet řádků. Problém by nastal při kreslení, kdy se v řádcích musí najít živé buňky (1 nebo 0). V nejhorším případě se tak znovu projde celá mřížka.
+- Použití bitových operací umožní pracovat s celými řádky najednou. Problém by nastal při kreslení, kdy se v řádcích musí najít živé buňky - bity 1 nebo 0. V nejhorším případě se tak znovu projde celá mřížka.
 
 ### Paměť
 Objekt `Painter` vytváří obrázek pro každou velikost buňky zvlášť. To je zejména kvůli tomu, aby se mřížky nemusely kreslit v každém snímku. Pro rychlejší kreslení tento problém nenastane a v jednu chvíli by tak mohl existovat pouze 1 obrázek.
