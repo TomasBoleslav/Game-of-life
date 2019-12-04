@@ -39,7 +39,7 @@ Otevře se okno programu. V horním panelu jsou k dispozici tlačítka pro minim
 5. Pro uložení použijte tlačítko **Save**. Zobrazí se dialog, v něm vyberte název souboru a cestu, potvrzením soubor uložte.
 6. Načtení provedete kliknutím na **Open**. V dialogu nalezněte příslušný soubor a potvrďte.
 
-Ve složce [examples](game-of-life/examples) najdete některé hotové mřížky pro načtení.
+Ve složce [examples](examples) najdete některé hotové mřížky pro načtení.
 
 ### Animace
 1. Animaci spustíte tlačítkem **Play**. Text tlačítka se změní na **Stop** a opětovným kliknutím animaci pozastavíte.
