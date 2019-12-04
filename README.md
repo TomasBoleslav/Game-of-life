@@ -15,7 +15,7 @@ Implementace [Conwayovy Hry života](https://en.wikipedia.org/wiki/Conway%27s_Ga
 ## Instalace
 Před spuštěním programu si musíte nainstalovat [Python](https://www.python.org/downloads/).
 
-Spolu s Pythonem se stáhne program pip. S jeho pomocí nainstalujte knihovnu [Pillow](https://pillow.readthedocs.io/en/stable/installation.html):
+Spolu s Pythonem se stáhne program pip, pomocí něj nainstalujte knihovnu [Pillow](https://pillow.readthedocs.io/en/stable/installation.html):
 1. Otevřete příkazový řádek jako správce.
 2. Stáhněte knihovnu příkazem:  
 ``Path\pip install Pillow``,  
