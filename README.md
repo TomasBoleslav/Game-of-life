@@ -135,11 +135,10 @@ Spustí animaci.
 Pozastaví animaci.
 
 ### Třída `FileManager`
-Statická třída, která načítá a ukládá `Board` do souboru.
-Výsledek zobrazuje v okně se zprávou (`messagebox`).
+Statická třída, která načítá a ukládá `Board` do souboru. Výsledek zobrazuje v okně se zprávou - `messagebox`.
 
 ### Třída `TkState`
-Statická třída, která aktivuje a deaktivuje komponenty `tkinter` - například deaktivace kreslení při animaci.
+Statická třída, která aktivuje a deaktivuje komponenty `tkinter` (především tlačítka).
 
 ### Třída `Application`
 Propojuje výpočet a grafické rozhraní programu. Obsahuje komponenty okna a objekty modulu `gol.py`, se kterými manipuluje podle událostí.
