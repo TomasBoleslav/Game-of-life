@@ -40,7 +40,7 @@ Spusťte soubor [main.py](game-of-life/main.py), zobrazí se okno programu. V ho
 <img src="images/drawing.png" height="444" width="675" />
 
 ### Animace
-1. Animaci spusťte tlačítkem **Play**. Text tlačítka se změní na **Stop** a opětovným kliknutím animaci pozastavíte.
+1. Animaci spustíte tlačítkem **Play**. Text tlačítka se změní na **Stop** a opětovným kliknutím animaci pozastavíte.
 2. Při pozastavené animaci můžete přejít k další generaci tlačítkem **Step**.
 2. Rychlost animace lze upravit posuvníkem **Speed**.
 3. Číslo současné generace je označeno nápisem **Gen**.
