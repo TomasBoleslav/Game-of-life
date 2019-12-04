@@ -13,8 +13,13 @@ Implementace [Conwayovy Hry života](https://en.wikipedia.org/wiki/Conway%27s_Ga
 * [Návrhy na zlepšení](#návrhy-na-zlepšení)
 
 ## Instalace
-Před spuštěním programu si musíte nainstalovat [Python](https://www.python.org/downloads/). Spolu s ním se stáhne program pip, pomocí kterého si stáhnete knihovnu [Pillow](https://pillow.readthedocs.io/en/stable/installation.html).
-``pip install Pillow``
+Před spuštěním programu si musíte nainstalovat [Python](https://www.python.org/downloads/).
+
+Spolu s Pythonem se stáhne program pip. Pomocí něj si stáhněte knihovnu [Pillow](https://pillow.readthedocs.io/en/stable/installation.html) v příkazovém řádku:
+
+``Path\pip install Pillow``,
+
+Kde `Path` je cesta k programu pip.
 
 ## Použití
 Spusťte soubor [main.py](game-of-life/main.py), zobrazí se okno programu. V horním panelu jsou k dispozici tlačítka pro minimalizaci, maximalizaci a zavření okna.
