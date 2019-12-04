@@ -41,6 +41,8 @@ Otevře se okno programu. V horním panelu jsou k dispozici tlačítka pro minim
 
 Ve složce [examples](examples) najdete některé hotové mřížky pro načtení.
 
+Všechny mřížky mají šířku a výšku 1000 - dohromady 1
+
 ### Animace
 1. Animaci spustíte tlačítkem **Play**. Text tlačítka se změní na **Stop** a opětovným kliknutím animaci pozastavíte.
 2. Při pozastavené animaci můžete přejít k další generaci tlačítkem **Step**.
@@ -104,15 +106,15 @@ Kreslí herní plochu `Board` na plátno `Canvas`.
 
 #### Proměnné:
 - **grids: list**  
-Obrázky s mřížkou pro různé velikosti buněk. Slouží jako pozadí, na které se budou buňky kreslit. Vytváří se v metodě `reset`, kterou je nutné zavolat před jakýmkoliv kreslením. Lze mezi nimi přepínat a tím mřížku „přibližovat / oddalovat“.
+Obrázky s mřížkou (svislými a vodorovnými čárami) pro různé velikosti buněk. Slouží jako pozadí, na které se budou buňky kreslit. Vytváří se v metodě `reset`, kterou je proto nutné zavolat před jakýmkoliv kreslením. Lze mezi nimi přepínat a tím mřížku „přibližovat / oddalovat“.
 - **m_cell: Tuple[int, int]**  
-Souřadnice buňky, která je zobrazena uprostřed mřížky. Se změnou těchto souřadnic se bude zobrazovat jiná část herní plochy. Obraz se tak může posouvat nahoru, dolů, anebo do stran.
+Souřadnice buňky, která je kreslena doprostřed mřížky. Se změnou těchto souřadnic se bude zobrazovat jiná část herní plochy. Obraz se tak může posouvat nahoru, dolů, anebo do stran.
 - **canvas_image: int**  
 Obrázek na plátně `Canvas` knihovny `tkinter` (ve skutečnosti jen jeho index). Je natažen na celou velikost plátna, pokud nepřekračuje velikost mřížek. Nakreslení herní plochy je provedeno změnou jeho parametru `image`.
 
 #### Metody:
 - **reset(...,cell_sizes: list,...) → None:**  
-Vytváří obrázky mřížek pro zadané velikosti.
+Vytváří obrázky mřížek pro zadané velikosti buněk.
 - **draw_board() → None:**  
 Nakreslí herní plochu v těchto krocích:
   - Ořízne prostřední část mřížky z `grids` na velikost plátna.
