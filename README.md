@@ -149,7 +149,7 @@ Propojuje výpočet a grafické rozhraní programu. Obsahuje komponenty okna a o
 ### Rychlost
 U většího počtu buněk nebo některých pravidel (např. *B1/R23*) je vidět, že počítání generací je velmi pomalé.
 
-Současně program prochází všechny živé buňky a spočte jejich stav. Výpočet by se dal potenciálně zlepšit:
+V současné verzi program prochází všechny živé buňky a spočte jejich stav. Výpočet by se dal potenciálně zlepšit:
 - Knihovna `numpy` nabízí datovou strukturu pole, kterým se mohou nahradit seznamy standardního Pythonu.
 - Použití bitových operací umožní pracovat s celými řádky najednou. Problém by nastal při kreslení, kdy se v řádcích musí najít živé buňky - bity 1 nebo 0. V nejhorším případě se tak znovu projde celá mřížka.
 
