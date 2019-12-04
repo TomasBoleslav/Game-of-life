@@ -22,7 +22,9 @@ Spolu s Pythonem se stáhne program pip. S jeho pomocí nainstalujte knihovnu [P
 kde `Path` je cesta k programu pip na vašem počítači.
 
 ## Použití
-Spusťte soubor [main.py](game-of-life/main.py), zobrazí se okno programu. V horním panelu jsou k dispozici tlačítka pro minimalizaci, maximalizaci a zavření okna.
+Na operačním systému Windows spusťtě soubor [main.pyw](game-of-life/main.pyw). Pokud máte jiný operační systém, spusťte [main.py](game-of-life/main.py) (zobrazí se s konzolí, tu ignorujte).
+
+Otevře se okno programu. V horním panelu jsou k dispozici tlačítka pro minimalizaci, maximalizaci a zavření okna.
 
 <img src="images/window.png" height="444" width="675" />
 
@@ -52,7 +54,7 @@ Současné pravidlo je označeno nápisem **Rule** nad herní plochou. Změníte
 2. Nastavení potvrďte tlačítkem **Set Rule**.
 
 ## Dokumentace
-Detaily najdete v kódu programu, zde jsou uvedeny pouze nejdůležitější metody a datové struktury.
+Detaily najdete v kódu, zde jsou uvedeny pouze nejdůležitější metody a datové struktury.
 
 ### Použité knihovny
 Zejména pro vzhled aplikace byly použity některé knihovny:
@@ -66,7 +68,7 @@ Zejména pro vzhled aplikace byly použity některé knihovny:
 ### Moduly
 - **gol.py:**  
 Třídy určené pro výpočet, kreslení a animaci: `Board`, `Rule`, `Painter`, `Animator`.
-- **main.py:**  
+- **main.py / main.pyw:**  
 Hlavní program se třídami: `FileManager`, `TkState`, `Application`.
 
 ### Třída `Board`
@@ -80,8 +82,7 @@ Seznam souřadnic (dvojice celých čísel) živých buněk v seznamu `current`.
 
 #### Metody:
 - **next_gen() → None:**  
-Spočítá další generaci buněk podle počtu jejich sousedů.  
-Prochází pouze živé buňky a jejich sousedy, protože ostatní buňky zůstanou nezměněné.
+Spočítá další generaci buněk podle počtu jejich sousedů. Prochází pouze živé buňky a jejich sousedy, protože ostatní buňky zůstanou nezměněné.
 
 ### Třída `Rule`
 Slouží pro snadnější nastavování pravidel hry (počtů sousedů) pomocí textového řetězce.
@@ -94,8 +95,7 @@ Počty sousedů pro přežití buňky (množina).
 
 #### Metody:
 - **try_set_rule(value: str) → bool:**  
-Pokusí se nastavit textový řetězec `value` jako nové pravidlo.  
-Vrací `True`, pokud je pravidlo správné, jinak `False`.
+Pokusí se nastavit textový řetězec `value` jako nové pravidlo. Vrací `True`, pokud je pravidlo správné, jinak `False`.
 
 ### Třída `Painter`
 Kreslí herní plochu `Board` na plátno `Canvas`.
