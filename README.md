@@ -30,7 +30,7 @@ Otevře se okno programu. V horním panelu jsou k dispozici tlačítka pro minim
 
 ### Tvorba mřížky
 1. Prázdnou mřížku vytvoříte kliknutím na **New Board**.
-2. Držením levého tlačítka myši můžete kreslit buňky. Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování. V pravém menu jsou k dispozici 3 módy.
+2. Držením levého tlačítka myši můžete kreslit buňky. Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování. V pravém menu jsou k dispozici 3 módy:
     - **Add** - přidat buňku.
     - **Remove** - odebrat buňku.
     - **Toggle** - změnit současný stav buňky. Po celou dobu jednoho tahu je nastaven jako *Add* nebo *Remove* podle stavu 1. buňky, na kterou bylo kliknuto.
