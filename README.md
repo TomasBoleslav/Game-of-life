@@ -46,7 +46,7 @@ Ve složce [examples](examples) najdete některé hotové mřížky pro načten�
 2. Při pozastavené animaci můžete přejít k další generaci tlačítkem **Step**.
 2. Rychlost animace lze upravit posuvníkem **Speed**.
 3. Číslo současné generace je označeno nápisem **Gen**.
-4. Animaci resetujete pomocí tlačítka **Reset**.
+4. Animaci resetujte pomocí tlačítka **Reset**.
 
 ### Změna pravidla
 Pravidlo hry se zapisuje ve formátu "B*x*/R*y*", kde *x* jsou počty sousedů pro narození buňky a *y* počty sousedů pro přežití. Čísla se v těchto částech nesmí opakovat a nula je zakázána.
