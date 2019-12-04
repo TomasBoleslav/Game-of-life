@@ -41,7 +41,7 @@ Otevře se okno programu. V horním panelu jsou k dispozici tlačítka pro minim
 
 Ve složce [examples](examples) najdete některé hotové mřížky pro načtení.
 
-Všechny mřížky mají šířku a výšku 1000 - dohromady 1
+Všechny mřížky mají šířku a výšku 1000 - dohromady 1 milion buněk.
 
 ### Animace
 1. Animaci spustíte tlačítkem **Play**. Text tlačítka se změní na **Stop** a opětovným kliknutím animaci pozastavíte.
