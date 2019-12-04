@@ -24,8 +24,6 @@ kde `Path` je cesta k programu pip na vašem počítači.
 ## Použití
 Spusťte soubor [main.py](game-of-life/main.py), zobrazí se okno programu. V horním panelu jsou k dispozici tlačítka pro minimalizaci, maximalizaci a zavření okna.
 
-<img src="images/window.png" height="444" width="675" />
-
 ### Tvorba mřížky
 1. Prázdnou mřížku vytvoříte kliknutím na **New Board**.
 2. Držením levého tlačítka myši můžete kreslit buňky. Úpravy lze provádět jen před spuštěním animace nebo po jejím resetování. V pravém menu jsou k dispozici 3 módy.
