@@ -37,7 +37,7 @@ Spusťte soubor [main.py](game-of-life/main.py), zobrazí se okno programu. V ho
 5. Pro uložení použijte tlačítko **Save**. Zobrazí se dialog, v něm vyberte název souboru a cestu, potvrzením soubor uložte.
 6. Načtení provedete kliknutím na **Open**. V dialogu nalezněte příslušný soubor a potvrďte.
 
-<img src="images/drawing.png" height="444" width="675" />
+<img src="images/drawing-cells.png" />
 
 ### Animace
 1. Animaci spustíte tlačítkem **Play**. Text tlačítka se změní na **Stop** a opětovným kliknutím animaci pozastavíte.
